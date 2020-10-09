@@ -1,3 +1,10 @@
 # KHO
 # 9 oct 2020
-#
+
+1. put abuse.ch.rpz kresd.conf and GeoLite2-City.mmdb in /etc/knot-resolver/
+
+2. copy update-urlhaus-abuse-ch.service and update-urlhaus-abuse-ch.timer to /usr/lib/systemd/system/
+
+3. systemctl daemon-reload
+4. systemctl enable --now update-urlhaus-abuse-ch.timer
+5. systemctl list-timers
