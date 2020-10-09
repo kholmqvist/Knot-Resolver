@@ -1,0 +1,10 @@
+[Unit]
+Description=Update RPZ file from urlhaus.abuse.ch for Knot Resolver
+
+[Timer]
+OnCalendar=*:0/10
+Persistent=true
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target

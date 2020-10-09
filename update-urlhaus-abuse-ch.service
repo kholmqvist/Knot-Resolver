@@ -1,0 +1,7 @@
+[Unit]
+Description=Update RPZ file from urlhaus.abuse.ch for Knot Resolver
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'curl https://urlhaus.abuse.ch/downloads/rpz/ | sed -e 's/\r$//' -e '/raw.githubusercontent.com/d'> /etc/knot-resolver/abuse.ch.rpz'
+
