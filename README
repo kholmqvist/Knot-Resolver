@@ -1,6 +1,11 @@
 # KHO
 # 9 oct 2020
 
+# CentOS 7/8
+yum install -y https://secure.nic.cz/files/knot-resolver/knot-resolver-release.el.rpm
+yum install -y knot-resolver
+
+
 1. put abuse.ch.rpz kresd.conf and GeoLite2-City.mmdb in /etc/knot-resolver/
 
 2. copy update-urlhaus-abuse-ch.service and update-urlhaus-abuse-ch.timer to /usr/lib/systemd/system/
